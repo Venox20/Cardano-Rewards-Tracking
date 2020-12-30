@@ -8,12 +8,10 @@ import pytz
 import argparse
 
 
-# Enter Your stake.addr
-
-stakeAdd = '<ENTER STAKE ADDRESS>'
-
 parser = argparse.ArgumentParser(description="Log Rewards from Stake Address.")
+parser.add_argument('--stake-addr', dest='stakeAdd', help='REQUIRED - Provie a Stake Address [stake.......]', required=True)
 parser.add_argument('--tz', dest='tz', default='America/Los_Angeles', help='the local timezone name [Default: America/Los_Angeles]')
+
 
 args = parser.parse_args()
 
@@ -50,6 +48,7 @@ print(Price)
 
 # Get Current balance
 
+stakeAdd = args.stakeAdd
 bal_cmd = f"cardano-cli query stake-address-info  --allegra-era --address {stakeAdd} --mainnet"
 
 response_Bal = subprocess.run(bal_cmd, shell=True, capture_output=True, text=True)
