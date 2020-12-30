@@ -8,7 +8,7 @@ import pytz
 import argparse
 
 
-parser = argparse.ArgumentParser(description="Log Rewards from Stake Address.")
+parser = argparse.ArgumentParser(description="Log Rewards using Stake Address.")
 parser.add_argument('--stake-addr', dest='stakeAdd', help='REQUIRED - Provie a Stake Address [stake.......]', required=True)
 parser.add_argument('--tz', dest='tz', default='America/Los_Angeles', help='the local timezone name [Default: America/Los_Angeles]')
 
