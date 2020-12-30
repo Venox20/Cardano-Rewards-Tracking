@@ -2,7 +2,7 @@
 
 Rewards_Logging.py will log the epoch number, date, price and stake.addr balance, into rewards.json.
 
-Requires --stake-add argument
+Requires Stake Address argument --stake-addr
 
 Optional Timezone argument --tz 
 
