@@ -18,7 +18,7 @@ args = parser.parse_args()
 # Get Epoch Number
 
 response_Epoch = requests.get('http://127.0.0.1:12798/metrics').text
-pattern = re.compile(r'cardano_node_ChainDB_metrics_epoch_int (\d*)')
+pattern = re.compile(r'cardano_node_metrics_epoch_int (\d*)')
 matches = pattern.finditer(response_Epoch)
 
 for match in matches:
